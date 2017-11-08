@@ -1,4 +1,7 @@
-define(['jquery','template','./utils','uploadify'],function($,template){
+define(['jquery','template','ckeditor','./utils','uploadify'],function($,template,CKEDITOR){
+
+    CKEDITOR.replace('ck');
+
     $('form').on('submit',function(){
         var _this = $(this);
         $.ajax({
